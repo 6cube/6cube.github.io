@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>smupid spec 1</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h1 id="smupid">smupid spec 1</h1>
+<p>smupid operates on an array of bytes. In the C interpreter it is an <code>unsigned char[65536]</code> using dynamic memory.</p>
+<p>Similar to Brainf__k, the pointer controls where you are reading/writing to in memory. You can only edit memory by adding/subtracting to it or by getting user input.</p>
+<p>In the C interpreter, the pointer is an <code>unsigned short</code>.</p>
+<h1 id="opcode-table">opcode table</h1>
+
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>usage</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>reset pointer</td>
+<td>p</td>
+<td>set pointer to zero.</td>
+</tr>
+<tr>
+<td>add to pointer</td>
+<td>d[x]</td>
+<td>add x to pointer.*</td>
+</tr>
+<tr>
+<td>add to memory</td>
+<td>a[x]</td>
+<td>add x to memory.*</td>
+</tr>
+<tr>
+<td>input</td>
+<td>i</td>
+<td>set memory to keyboard input.</td>
+</tr>
+<tr>
+<td>output</td>
+<td>o</td>
+<td>output memory.</td>
+</tr>
+<tr>
+<td>loop</td>
+<td>=[b] { … }</td>
+<td>if memory == b, all code within {} is skipped. If it doesn’t, that code will loop until it does.**</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>* x can be positive or negative.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>** b can only be a valid unsigned byte value (0-255)</td>
+</tr>
+</tbody>
+</table></div>
+</body>
+
+</html>
