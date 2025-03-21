@@ -1,0 +1,13 @@
+body {
+  font-family: "Comic Sans MS", "Papyrus", fantasy;
+  background-color: #282828;
+  color: pink;
+}
+.headline {
+  background: linear-gradient(90deg, #f00 0%, #ff0 4%, #0f0 8%, #0ff 12%, #00f 16%, #f0f 20%);
+  color: transparent;
+  background-clip: text;
+}
+a {
+  color: pink;
+}
