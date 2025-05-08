@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <link href="/style.css" rel="stylesheet" type="text/css" />
+        <title>MAX7219 Image Generator</title>
+    </head>
+    <body style="text-align: center">
+        <h2 id="enableAutoplay" style="color: white"></h2>
+        <audio autoplay controls id="player">Your dumbass browser doesn't support audio... 🥀</audio>
+        <h2>now playing:</h2>
+        <h3 id="nowPlaying"></h3>
+        <button id="playBtn" onclick="player_toggle()">play music</button>
+        <button onclick="audio.currentTime = audio.duration;">skip song</button>
+        <button onclick="goTo('/index.html')">go back</button>
+
+        <hr>
+
+        <h1 style="color: orange">Arduino MAX7219 Image Generator</h1>
+        <img id="0" src="lightpxl.png" onclick="toggle(this);" />
+        <img id="1" src="lightpxl.png" onclick="toggle(this);" />
+        <img id="2" src="lightpxl.png" onclick="toggle(this);" />
+        <img id="3" src="lightpxl.png" onclick="toggle(this);" />
+        <img id="4" src="lightpxl.png" onclick="toggle(this);" />
+        <img id="5" src="lightpxl.png" onclick="toggle(this);" />
+        <img id="6" src="lightpxl.png" onclick="toggle(this);" />
+        <img id="7" src="lightpxl.png" onclick="toggle(this);" />
+        <br>
+        <img id="8" src="lightpxl.png" onclick="toggle(this);" />
+        <img id="9" src="lightpxl.png" onclick="toggle(this);" />
+        <img id="10" src="lightpxl.png" onclick="toggle(this);" />
+        <img id="11" src="lightpxl.png" onclick="toggle(this);" />
+        <img id="12" src="lightpxl.png" onclick="toggle(this);" />
+        <img id="13" src="lightpxl.png" onclick="toggle(this);" />
+        <img id="14" src="lightpxl.png" onclick="toggle(this);" />
+        <img id="15" src="lightpxl.png" onclick="toggle(this);" />
+        <br>
+        <img id="16" src="lightpxl.png" onclick="toggle(this);" />
+        <img id="17" src="lightpxl.png" onclick="toggle(this);" />
+        <img id="18" src="lightpxl.png" onclick="toggle(this);" />
+        <img id="19" src="lightpxl.png" onclick="toggle(this);" />
+        <img id="20" src="lightpxl.png" onclick="toggle(this);" />
+        <img id="21" src="lightpxl.png" onclick="toggle(this);" />
+        <img id="22" src="lightpxl.png" onclick="toggle(this);" />
+        <img id="23" src="lightpxl.png" onclick="toggle(this);" />
+        <br>
+        <img id="24" src="lightpxl.png" onclick="toggle(this);" />
+        <img id="25" src="lightpxl.png" onclick="toggle(this);" />
+        <img id="26" src="lightpxl.png" onclick="toggle(this);" />
+        <img id="27" src="lightpxl.png" onclick="toggle(this);" />
+        <img id="28" src="lightpxl.png" onclick="toggle(this);" />
+        <img id="29" src="lightpxl.png" onclick="toggle(this);" />
+        <img id="30" src="lightpxl.png" onclick="toggle(this);" />
+        <img id="31" src="lightpxl.png" onclick="toggle(this);" />
+        <br>
+        <img id="32" src="lightpxl.png" onclick="toggle(this);" />
+        <img id="33" src="lightpxl.png" onclick="toggle(this);" />
+        <img id="34" src="lightpxl.png" onclick="toggle(this);" />
+        <img id="35" src="lightpxl.png" onclick="toggle(this);" />
+        <img id="36" src="lightpxl.png" onclick="toggle(this);" />
+        <img id="37" src="lightpxl.png" onclick="toggle(this);" />
+        <img id="38" src="lightpxl.png" onclick="toggle(this);" />
+        <img id="39" src="lightpxl.png" onclick="toggle(this);" />
+        <br>
+        <img id="40" src="lightpxl.png" onclick="toggle(this);" />
+        <img id="41" src="lightpxl.png" onclick="toggle(this);" />
+        <img id="42" src="lightpxl.png" onclick="toggle(this);" />
+        <img id="43" src="lightpxl.png" onclick="toggle(this);" />
+        <img id="44" src="lightpxl.png" onclick="toggle(this);" />
+        <img id="45" src="lightpxl.png" onclick="toggle(this);" />
+        <img id="46" src="lightpxl.png" onclick="toggle(this);" />
+        <img id="47" src="lightpxl.png" onclick="toggle(this);" />
+        <br>
+        <img id="48" src="lightpxl.png" onclick="toggle(this);" />
+        <img id="49" src="lightpxl.png" onclick="toggle(this);" />
+        <img id="50" src="lightpxl.png" onclick="toggle(this);" />
+        <img id="51" src="lightpxl.png" onclick="toggle(this);" />
+        <img id="52" src="lightpxl.png" onclick="toggle(this);" />
+        <img id="53" src="lightpxl.png" onclick="toggle(this);" />
+        <img id="54" src="lightpxl.png" onclick="toggle(this);" />
+        <img id="55" src="lightpxl.png" onclick="toggle(this);" />
+        <br>
+        <img id="56" src="lightpxl.png" onclick="toggle(this);" />
+        <img id="57" src="lightpxl.png" onclick="toggle(this);" />
+        <img id="58" src="lightpxl.png" onclick="toggle(this);" />
+        <img id="59" src="lightpxl.png" onclick="toggle(this);" />
+        <img id="60" src="lightpxl.png" onclick="toggle(this);" />
+        <img id="61" src="lightpxl.png" onclick="toggle(this);" />
+        <img id="62" src="lightpxl.png" onclick="toggle(this);" />
+        <img id="63" src="lightpxl.png" onclick="toggle(this);" />
+        <br>
+        LedControl/C++:
+        <div style="display: inline; background-color: #353637; color: #ddd; font-family: consolas;" id="coutput">byte img[] = { 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000 };</div>
+        <button id="copy" onclick="copy(document.getElementById('coutput'));">Copy</button><br>
+        Here's an <a href="./example.txt">example</a>.
+        <script>
+var imgarr = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+function toggle(cell)
+{
+    if ( cell.src.indexOf('lightpxl.png') > -1 )
+    {
+        cell.src = "darkpxl.png";
+        imgarr[cell.id] = 1;
+    }
+    else
+    {
+        cell.src = "lightpxl.png";
+        imgarr[cell.id] = 0;
+    }
+    document.getElementById('coutput').innerHTML = 'byte img[] = { 0b'+imgarr[0]+imgarr[1]+imgarr[2]+imgarr[3]+imgarr[4]+imgarr[5]+imgarr[6]+imgarr[7]+', 0b'+imgarr[8]+imgarr[9]+imgarr[10]+imgarr[11]+imgarr[12]+imgarr[13]+imgarr[14]+imgarr[15]+', 0b'+imgarr[16]+imgarr[17]+imgarr[18]+imgarr[19]+imgarr[20]+imgarr[21]+imgarr[22]+imgarr[23]+', 0b'+imgarr[24]+imgarr[25]+imgarr[26]+imgarr[27]+imgarr[28]+imgarr[29]+imgarr[30]+imgarr[31]+', 0b'+imgarr[32]+imgarr[33]+imgarr[34]+imgarr[35]+imgarr[36]+imgarr[37]+imgarr[38]+imgarr[39]+', 0b'+imgarr[40]+imgarr[41]+imgarr[42]+imgarr[43]+imgarr[44]+imgarr[45]+imgarr[46]+imgarr[47]+', 0b'+imgarr[48]+imgarr[49]+imgarr[50]+imgarr[51]+imgarr[52]+imgarr[53]+imgarr[54]+imgarr[55]+', 0b'+imgarr[56]+imgarr[57]+imgarr[58]+imgarr[59]+imgarr[60]+imgarr[61]+imgarr[62]+imgarr[63]+' };';
+  document.getElementById('aoutput').innerHTML = 'sig 0b'+imgarr[0]+imgarr[1]+imgarr[2]+imgarr[3]+imgarr[4]+imgarr[5]+imgarr[6]+imgarr[7]+', 0b'+imgarr[8]+imgarr[9]+imgarr[10]+imgarr[11]+imgarr[12]+imgarr[13]+imgarr[14]+imgarr[15]+', 0b'+imgarr[16]+imgarr[17]+imgarr[18]+imgarr[19]+imgarr[20]+imgarr[21]+imgarr[22]+imgarr[23]+', 0b'+imgarr[24]+imgarr[25]+imgarr[26]+imgarr[27]+imgarr[28]+imgarr[29]+imgarr[30]+imgarr[31]+', 0b'+imgarr[32]+imgarr[33]+imgarr[34]+imgarr[35]+imgarr[36]+imgarr[37]+imgarr[38]+imgarr[39]+', 0b'+imgarr[40]+imgarr[41]+imgarr[42]+imgarr[43]+imgarr[44]+imgarr[45]+imgarr[46]+imgarr[47]+', 0b'+imgarr[48]+imgarr[49]+imgarr[50]+imgarr[51]+imgarr[52]+imgarr[53]+imgarr[54]+imgarr[55]+', 0b'+imgarr[56]+imgarr[57]+imgarr[58]+imgarr[59]+imgarr[60]+imgarr[61]+imgarr[62]+imgarr[63];
+    document.getElementById('copy').innerHTML = "Copy";
+}
+function copy(copyText)
+{
+    navigator.clipboard.writeText(copyText.innerHTML);
+    document.getElementById('copy').innerHTML = "Copied";
+}
+        </script>
+
+        <script src="/script.js"></script>
+    </body>
+</html>
