@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Blender - Cube</title>
+        <link href="../style.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h2 id="enableAutoplay" style="color: white"></h2>
+        <audio autoplay controls id="player">Your dumbass browser doesn't support audio... 🥀</audio>
+        <h2>now playing:</h2>
+        <h3 id="nowPlaying"></h3>
+        <button id="playBtn" onclick="player_toggle()">play music</button>
+         <button onclick="audio.currentTime = audio.duration;">skip song</button>
+        <button onclick="goTo('/index.html')">go back</button>
+
+        <hr>
+
+        <h1 style="color: orange">Cube's Blender Stuff</h1>
+        <h2>Click on any render to open it.</h2>
+        <img onclick="window.location.href = 'ballpit.png'" class="imagelink" src="ballpit200.png" />
+        <img onclick="window.location.href = 'wreck.png'" class="imagelink" src="wreck200.png" />
+        <img onclick="window.location.href = 'box.png'" class="imagelink" src="box200.png"/>
+        <img onclick="window.location.href = 'abstract.png'" class="imagelink" src="abstract200.png" />
+        <img onclick="window.location.href = 'christmas.png'" class="imagelink" src="christmas200.png" />
+        <img onclick="window.location.href = 'ice_cream.png'" class="imagelink" src="ice_cream200.png" />
+        <img onclick="window.location.href = 'flowerpot.png'" class="imagelink" src="flowerpot200.png" />
+        <img onclick="window.location.href = 'airplane.png'" class="imagelink" src="airplane200.png" />
+        <img onclick="window.location.href = 'home.png'" class="imagelink" src="home200.png" />
+        <img onclick="window.location.href = 'home2.png'" class="imagelink" src="home2200.png" />
+        <img onclick="window.location.href = 'kahoot.png'" class="imagelink" src="kahoot200.png" />
+        <img onclick="window.location.href = 'couch.png'" class="imagelink" src="couch200.png" />
+        <img onclick="window.location.href = 'mc_couch.png'" class="imagelink" src="mc_couch200.png" />
+        <img onclick="window.location.href = 'CRT.png'" class="imagelink" src="CRT200.png" />
+        <img onclick="window.location.href = 'FS.png'" class="imagelink" src="FS200.png" />
+        <video muted loop autoplay onclick="window.location.href = 'dance.mp4'" class="imagelink" width="112" height="200" src="dance.mp4" />
+        <video muted loop autoplay onclick="window.location.href = 'helicube.mp4'" class="imagelink" width="355" height="200" src="helicube.mp4" />
+        <video muted loop autoplay onclick="window.location.href = 'nod.mp4'" class="imagelink" width="355" height="200" src="nod.mp4" />
+        <video muted loop autoplay onclick="window.location.href = 'cya.mp4'" class="imagelink" width="355" height="200" src="cya.mp4" />
+        <video muted loop autoplay onclick="window.location.href = 'rain.mp4'" class="imagelink" width="355" height="200" src="rain.mp4" />
+
+        <script src="/script.js"></script>
+    </body>
+</html>
